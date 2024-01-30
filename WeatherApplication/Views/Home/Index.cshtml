@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <form method="post" action="/Home/GetWeather">
+        <label for="city">Enter City:</label>
+        <input type="text" name="city" id="city" required />
+        <button type="submit">Get Weather</button>
+    </form>
+
+    <h2>@ViewData["City"] Weather</h2>
+    <p>Temperature: @ViewData["Temperature"]°C</p>
+    <p>Weather: @ViewData["Weather"]</p>
+    <p>@ViewData["ErrorMessage"]</p>
+
+
+</div>
